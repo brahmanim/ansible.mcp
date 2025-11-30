@@ -17,3 +17,7 @@
   ansible.builtin.template:
     src: inventory.yml.j2
     dest: "{{ ansible_mcp_inventory_file_path }}"
+
+- name: Display inventory file
+  ansible.builtin.debug:
+    msg: "{{ lookup('ansible.builtin.file', ansible_mcp_inventory_file_path) }}"

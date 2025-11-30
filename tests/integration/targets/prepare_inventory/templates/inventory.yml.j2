@@ -27,6 +27,6 @@ all:
 {% if security_token is defined %}
             AWS_SESSION_TOKEN: "{{ security_token }}"
 {% endif %}
-            FASTMCP_LOG_LEVEL: "ERROR"
+            FASTMCP_LOG_LEVEL: "DEBUG"
           ansible_mcp_manifest_path: {{ role_path }}/files/manifest.json
 {% endif %}

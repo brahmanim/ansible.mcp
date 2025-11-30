@@ -19,7 +19,7 @@ trap 'cleanup'  ERR
 ansible-playbook setup.yml -e '@../../integration_config.yml' "$@"
 
 # Run tests
-ansible-playbook test.yml -i inventory.yml "$@"
+ansible-playbook test.yml -i inventory.yml "$@" -vvv
 
 # Remove inventory file
 rm -f ./inventory.yml

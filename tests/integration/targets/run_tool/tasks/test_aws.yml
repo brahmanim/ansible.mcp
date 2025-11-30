@@ -7,7 +7,7 @@
     name: list_roles
     args:
       max_items: 10
-  no_log: true
+  no_log: false
   register: aws_list_roles_result
 
 - name: Verify list_roles result
